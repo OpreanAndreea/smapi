@@ -1,13 +1,13 @@
 package com.coding_project.smapi.service;
 
-import com.coding_project.smapi.dto.TaskRequestDto;
-import com.coding_project.smapi.dto.TaskResponseDto;
+import com.coding_project.smapi.dto.request.TaskRequestDto;
+import com.coding_project.smapi.dto.response.TaskResponseDto;
 import com.coding_project.smapi.enums.Priority;
 import com.coding_project.smapi.enums.TaskStatus;
 import com.coding_project.smapi.enums.TaskType;
 import com.coding_project.smapi.mapper.TaskMapper;
-import com.coding_project.smapi.model.Job;
-import com.coding_project.smapi.model.Task;
+import com.coding_project.smapi.entity.Job;
+import com.coding_project.smapi.entity.Task;
 import com.coding_project.smapi.repository.JobRepository;
 import com.coding_project.smapi.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +44,21 @@ public class TaskService {
 
     public List<TaskResponseDto> getTasksByStatus(TaskStatus status) {
         return taskRepository.findByStatus(status).stream()
+                .map(task -> taskMapper.toDto(task))
+                .toList();
+    }
+
+    public List<TaskResponseDto> getTasksByPriority(Priority priority) {
+        return taskRepository.findByPriority(priority).stream()
+                .map(task -> taskMapper.toDto(task))
+                .toList();
+    }
+
+    public List<TaskResponseDto> getTasksByDeadline(int days) {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime targetDate = now.plusDays(days);
+
+        return taskRepository.findByDeadlineBetween(now, targetDate).stream()
                 .map(task -> taskMapper.toDto(task))
                 .toList();
     }

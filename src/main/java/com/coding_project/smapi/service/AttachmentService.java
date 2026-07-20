@@ -1,10 +1,10 @@
 package com.coding_project.smapi.service;
 
-import com.coding_project.smapi.dto.AttachmentRequestDto;
-import com.coding_project.smapi.dto.AttachmentResponseDto;
+import com.coding_project.smapi.dto.request.AttachmentRequestDto;
+import com.coding_project.smapi.dto.response.AttachmentResponseDto;
 import com.coding_project.smapi.mapper.AttachmentMapper;
-import com.coding_project.smapi.model.Attachment;
-import com.coding_project.smapi.model.Task;
+import com.coding_project.smapi.entity.Attachment;
+import com.coding_project.smapi.entity.Task;
 import com.coding_project.smapi.repository.AttachmentRepository;
 import com.coding_project.smapi.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;

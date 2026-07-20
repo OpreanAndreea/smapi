@@ -1,7 +1,7 @@
 package com.coding_project.smapi.mapper;
 
-import com.coding_project.smapi.dto.TaskResponseDto;
-import com.coding_project.smapi.model.Task;
+import com.coding_project.smapi.dto.response.TaskResponseDto;
+import com.coding_project.smapi.entity.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

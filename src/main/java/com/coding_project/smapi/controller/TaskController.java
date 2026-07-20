@@ -1,7 +1,8 @@
 package com.coding_project.smapi.controller;
 
-import com.coding_project.smapi.dto.TaskRequestDto;
-import com.coding_project.smapi.dto.TaskResponseDto;
+import com.coding_project.smapi.dto.request.TaskRequestDto;
+import com.coding_project.smapi.dto.response.TaskResponseDto;
+import com.coding_project.smapi.enums.Priority;
 import com.coding_project.smapi.enums.TaskStatus;
 import com.coding_project.smapi.service.TaskService;
 
@@ -32,6 +33,16 @@ public class TaskController {
     @GetMapping("/status/{status}")
     public List<TaskResponseDto> getTasksByStatus(@PathVariable TaskStatus status) {
         return taskService.getTasksByStatus(status);
+    }
+
+    @GetMapping("/priority/{priority}")
+    public List<TaskResponseDto> getTasksByPriority(@PathVariable Priority priority) {
+        return taskService.getTasksByPriority(priority);
+    }
+
+    @GetMapping("/deadline/{days}")
+    public List<TaskResponseDto> getTasksByDeadline(@PathVariable int days) {
+        return taskService.getTasksByDeadline(days);
     }
 
     @PostMapping("/add")

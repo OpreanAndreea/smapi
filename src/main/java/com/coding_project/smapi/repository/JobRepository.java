@@ -1,6 +1,6 @@
 package com.coding_project.smapi.repository;
 
-import com.coding_project.smapi.model.Job;
+import com.coding_project.smapi.entity.Job;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

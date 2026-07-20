@@ -1,7 +1,7 @@
 package com.coding_project.smapi.mapper;
 
-import com.coding_project.smapi.dto.AttachmentResponseDto;
-import com.coding_project.smapi.model.Attachment;
+import com.coding_project.smapi.dto.response.AttachmentResponseDto;
+import com.coding_project.smapi.entity.Attachment;
 import org.springframework.stereotype.Component;
 
 @Component

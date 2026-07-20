@@ -1,6 +1,6 @@
 package com.coding_project.smapi.controller;
 
-import com.coding_project.smapi.model.User;
+import com.coding_project.smapi.entity.User;
 import com.coding_project.smapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

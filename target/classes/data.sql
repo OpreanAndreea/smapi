@@ -30,3 +30,17 @@ INSERT INTO attachments (id, file_name, file_url, file_size, content_type, uploa
 VALUES
     (gen_random_uuid(), 'pom_backup.xml', 'https://s3.amazonaws.com/smapi/backups/pom_backup.xml', 4096, 'application/xml', '2026-07-14 09:40:00', 1),
     (gen_random_uuid(), 'schema_draft.sql', 'https://s3.amazonaws.com/smapi/sql/schema_draft.sql', 2048, 'text/plain', '2026-07-14 09:45:00', 2);
+
+
+INSERT INTO inventory_items (code, name, unit_price, quantity_in_stock) VALUES
+    ('CTRL-SMART-01', 'Smart Door Controller', 100.00, 15),
+    ('CAB-HD-05', 'Heavy Duty Connection Cable', 25.00, 120),
+    ('SENS-MAG-02', 'Magnetic Door Contact Sensor', 15.50, 40),
+    ('BRKT-STEEL-09', 'Heavy Duty Steel Mounting Bracket', 8.00, 10);
+
+
+INSERT INTO job_materials (job_id, inventory_item_id, quantity_used, price_at_allocation)
+SELECT 1, i.id, 1, 100.00 FROM inventory_items i WHERE i.code = 'CTRL-SMART-01';
+
+INSERT INTO job_materials (job_id, inventory_item_id, quantity_used, price_at_allocation)
+SELECT 1, i.id, 2, 25.00 FROM inventory_items i WHERE i.code = 'CAB-HD-05';

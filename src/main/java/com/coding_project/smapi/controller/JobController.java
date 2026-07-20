@@ -1,7 +1,7 @@
 package com.coding_project.smapi.controller;
 
-import com.coding_project.smapi.dto.JobRequestDto;
-import com.coding_project.smapi.dto.JobResponseDto;
+import com.coding_project.smapi.dto.request.JobRequestDto;
+import com.coding_project.smapi.dto.response.JobResponseDto;
 import com.coding_project.smapi.enums.JobStatus;
 import com.coding_project.smapi.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;

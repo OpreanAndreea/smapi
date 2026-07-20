@@ -1,6 +1,6 @@
 package com.coding_project.smapi.service;
 
-import com.coding_project.smapi.model.User;
+import com.coding_project.smapi.entity.User;
 import com.coding_project.smapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

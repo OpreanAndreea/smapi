@@ -1,7 +1,7 @@
 package com.coding_project.smapi.controller;
 
-import com.coding_project.smapi.dto.AttachmentRequestDto;
-import com.coding_project.smapi.dto.AttachmentResponseDto;
+import com.coding_project.smapi.dto.request.AttachmentRequestDto;
+import com.coding_project.smapi.dto.response.AttachmentResponseDto;
 import com.coding_project.smapi.service.AttachmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
