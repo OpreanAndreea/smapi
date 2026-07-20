@@ -1,6 +1,3 @@
-INSERT INTO users(id, username, password, first_name, last_name, email, phone)
-VALUES (1, 'ajurje', '123', 'Andreea', 'Jurje', 'andreea.oprean@ibm.com', '+40740284013');
-
 INSERT INTO jobs (title, description, start_date, end_date, deadline, created_at, updated_at)
 VALUES
 ('Setup OAuth2 Authorization Server', 'Design and implement SSO authentication flow.', NULL, NULL, '2026-08-15 17:00:00', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
